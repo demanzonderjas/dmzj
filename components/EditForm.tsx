@@ -11,6 +11,7 @@ export const EditArticleForm: React.FC = observer(() => {
     const router = useRouter();
     const [article, setArticle] = useState(null);
     const [value, setValue] = useState("");
+    const [confirm, setConfirm] = useState(false);
 
     useEffect(() => {
         if (!isAdmin) {
@@ -32,6 +33,11 @@ export const EditArticleForm: React.FC = observer(() => {
         router.push(`/schrijfsels/${article.slug}`);
     };
 
+    const deleteArticle = async () => {
+        await db.deleteArticle(article.key);
+        router.push(`/schrijfsels`);
+    };
+
     if (!article) {
         return null;
     }
@@ -40,7 +46,24 @@ export const EditArticleForm: React.FC = observer(() => {
         <form className="flex flex-col gap-5 w-full" onSubmit={update}>
             <input name="header" defaultValue={article.header} />
             <RichTextField value={value} setValue={setValue} />
-            <button type="submit">Opslaan</button>
+            <div className="flex justify-between">
+                {!confirm && (
+                    <button type="button" onClick={() => setConfirm(true)}>
+                        Verwijderen
+                    </button>
+                )}
+                {confirm && (
+                    <button type="button" onClick={() => setConfirm(false)}>
+                        Cancel
+                    </button>
+                )}
+                {confirm && (
+                    <button type="button" onClick={deleteArticle}>
+                        Bevestigen
+                    </button>
+                )}
+                <button type="submit">Opslaan</button>
+            </div>
         </form>
     );
 });

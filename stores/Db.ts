@@ -7,6 +7,7 @@ import {
     get,
     getDatabase,
     ref,
+    remove,
     push,
     set,
     query,
@@ -58,6 +59,10 @@ export class Db {
 
     updateArticle(key: string, article: TArticle) {
         return set(child(this.dbRef, `articles/${key}`), article);
+    }
+
+    deleteArticle(key: string) {
+        return remove(child(this.dbRef, `articles/${key}`));
     }
 
     async getArticle(slug: string): Promise<TArticle> {

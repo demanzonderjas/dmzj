@@ -26,7 +26,7 @@ export const Page: React.FC<{ children?: any; header: string }> = ({ children, h
                 />
                 <Menu />
             </header>
-            <main className="p-12 flex flex-wrap justify-start">
+            <main className="p-12 flex flex-wrap justify-start pt-0">
                 {children}
                 {router.pathname !== "/" && (
                     <div className="w-full my-4">

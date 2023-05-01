@@ -14,6 +14,9 @@ export default function Schrijven() {
         e.preventDefault();
         const formData = new FormData(e.target);
         const { header } = Object.fromEntries(formData) as { [k in string]: string };
+        if (!header) {
+            return;
+        }
         const slug = slugify(header);
 
         await db.saveArticle({ header, content: value, slug });
