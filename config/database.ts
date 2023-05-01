@@ -1,14 +1,16 @@
 import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-    // ...
-    // The value of `databaseURL` depends on the location of the database
+    apiKey: "AIzaSyBX0VZGuLynfA2pn_UcTgq_9PN15QYt7DM",
+    authDomain: "demanzonderjas-b66cd.firebaseapp.com",
     databaseURL: "https://demanzonderjas-b66cd-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "demanzonderjas-b66cd",
+    storageBucket: "demanzonderjas-b66cd.appspot.com",
+    messagingSenderId: "1020540002126",
+    appId: "1:1020540002126:web:dda21b9fea91a3730c081f",
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 
-// Initialize Realtime Database and get a reference to the service
-export const database = getDatabase(app);
+export default firebaseApp;

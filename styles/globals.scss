@@ -31,3 +31,19 @@ h2 {
   margin: 2rem 0;
   font-weight: bold;
 }
+
+input {
+  border: 1px dotted black;
+  padding: 1.25rem;
+  font-size: 1.5rem;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+button {
+  background-color: rgb(var(--color-primary)) !important;
+  color: white; 
+  padding: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}

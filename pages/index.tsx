@@ -4,7 +4,7 @@ import { Page } from "../components/layout/Page";
 
 export default function Home() {
     return (
-        <Page>
+        <Page header="De man zonder jas - inspireer door te onderscheiden">
             <AboutMe />
             <ArticleList />
         </Page>
