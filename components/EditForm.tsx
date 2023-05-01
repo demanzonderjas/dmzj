@@ -45,7 +45,7 @@ export const EditArticleForm: React.FC = observer(() => {
     return (
         <form className="flex flex-col gap-5 w-full" onSubmit={update}>
             <input name="header" defaultValue={article.header} />
-            <RichTextField value={value} setValue={setValue} />
+            {/* <RichTextField value={value} setValue={setValue} /> */}
             <div className="flex justify-between">
                 {!confirm && (
                     <button type="button" onClick={() => setConfirm(true)}>

@@ -27,7 +27,7 @@ export default function Schrijven() {
         <Page header="Schrijven">
             <form className="flex flex-col gap-5 w-full" onSubmit={save}>
                 <input name="header" />
-                <RichTextField value={value} setValue={setValue} />
+                {/* <RichTextField value={value} setValue={setValue} /> */}
                 <button type="submit">Opslaan</button>
             </form>
         </Page>
