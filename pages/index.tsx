@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <Page header="De man zonder jas - inspireer door te onderscheiden">
             <AboutMe />
-            <ArticleList />
+            <ArticleList onlyLatest={true} />
         </Page>
     );
 }

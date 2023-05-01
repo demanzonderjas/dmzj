@@ -18,8 +18,8 @@ export const AboutMe: React.FC = () => {
                 Ik zie het als een mooie uitdaging voor wat mentale weerbaarheid en het bouwen van vertrouwen in je lichaam.
             </p>
             <p className="my-4">
-                Verder heb ik mezelf leren programmeren als webdeveloper en bouw ik met veel plezier zelfstandig aan enkele
-                projecten, en dan met name, <Link href="https://puzzel.org">Puzzel.org</Link>.
+                Verder heb ik mezelf leren programmeren als webdeveloper en bouw ik met veel plezier zelfstandig aan enkele{" "}
+                <Link href="/projecten">projecten</Link>.
             </p>
             <p className="my-4">
                 Mocht je een keertje willen mailen, tof! Dat kan via{" "}
