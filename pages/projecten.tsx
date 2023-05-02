@@ -27,6 +27,12 @@ export default function Projecten() {
             image: "logo-pct.jpg",
         },
         {
+            title: "TreesForAll - Bomen/bossen planten",
+            summary: "<p>Klimaatverandering is een enorme uitdaging en ik draag graag mijn steentje bij door een flink deel van mijn resterende inkomsten om te zetten in groen via de ANBI stichting TreesForAll.</p><p>Op dit moment heb ik <strong>5.000+ bomen</strong> geplant.</p>",
+            link: "https://treesforall.nl",
+            image: "treesforall.svg",
+        },
+        {
             title: "Demanzonderjas.nl",
             summary: "<p>Eigen website met schrijfsels en overzicht van mijn lopende bezigheden :-).</p>",
             link: "https://demanzonderjas.nl",

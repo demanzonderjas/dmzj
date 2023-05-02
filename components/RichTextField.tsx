@@ -13,7 +13,8 @@ const joditConfig = {
     width: "100%",
 };
 
-export const RichTextField: React.FC<{ value: string; setValue: Function }> = ({ value, setValue }) => {
+
+const RichTextField: React.FC<{ value: string; setValue: Function }> = ({ value, setValue }) => {
     const editor = useRef(null);
 
     const config = {
@@ -27,3 +28,5 @@ export const RichTextField: React.FC<{ value: string; setValue: Function }> = ({
         </div>
     );
 };
+
+export default RichTextField

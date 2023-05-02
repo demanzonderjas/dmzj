@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const AboutMe: React.FC = () => {
-    const startingYear = 2016;
+    const startingYear = 2005;
     const currentYear = new Date().getFullYear();
     const noJasTime = currentYear - startingYear;
     return (

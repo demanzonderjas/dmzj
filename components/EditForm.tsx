@@ -3,7 +3,12 @@ import { useRouter } from "next/router";
 import { useDatabase } from "@/hooks/useDatabase";
 import { useEffect, useState } from "react";
 import { useAdmin } from "@/hooks/useAdmin";
-import { RichTextField } from "./RichTextField";
+import dynamic from 'next/dynamic'
+
+
+const RichTextField = dynamic(() => import('./RichTextField'), {
+    ssr: false
+})
 
 export const EditArticleForm: React.FC = observer(() => {
     const { db } = useDatabase();
@@ -45,7 +50,7 @@ export const EditArticleForm: React.FC = observer(() => {
     return (
         <form className="flex flex-col gap-5 w-full" onSubmit={update}>
             <input name="header" defaultValue={article.header} />
-            {/* <RichTextField value={value} setValue={setValue} /> */}
+            <RichTextField value={value} setValue={setValue} />
             <div className="flex justify-between">
                 {!confirm && (
                     <button type="button" onClick={() => setConfirm(true)}>

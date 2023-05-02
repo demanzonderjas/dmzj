@@ -3,7 +3,12 @@ import { Page } from "../components/layout/Page";
 import { useDatabase } from "../hooks/useDatabase";
 import { slugify } from "../utils/formatting";
 import { useState } from "react";
-import { RichTextField } from "../components/RichTextField";
+import dynamic from 'next/dynamic'
+
+
+const RichTextField = dynamic(() => import('../components/RichTextField'), {
+    ssr: false
+})
 
 export default function Schrijven() {
     const { db } = useDatabase();
@@ -27,7 +32,7 @@ export default function Schrijven() {
         <Page header="Schrijven">
             <form className="flex flex-col gap-5 w-full" onSubmit={save}>
                 <input name="header" />
-                {/* <RichTextField value={value} setValue={setValue} /> */}
+                <RichTextField value={value} setValue={setValue} />
                 <button type="submit">Opslaan</button>
             </form>
         </Page>

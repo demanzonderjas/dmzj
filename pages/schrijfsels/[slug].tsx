@@ -30,7 +30,7 @@ export default function Post({ post }: { post: TArticle }) {
     return (
         <Page header={post.header}>
             <h1>{post.header}</h1>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} className="w-full my-4" style={{ minHeight: "40vh" }} />
+            <div dangerouslySetInnerHTML={{ __html: post.content }} className="w-full my-4 sm:whitespace-nowrap" style={{ minHeight: "40vh" }} />
             <EditButton slug={post.slug} />
         </Page>
     );
